@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.clientGUI.ChatController"
+      >
+    <HBox prefHeight="20">
+        <TextField fx:id="addfriend" prefWidth="106.6"/>
+        <Button  prefWidth="53.3" text="加好友" onAction="#actionPerformedAddFriend"/>
+
+    </HBox>
+    <VBox fx:id="vbox2" layoutX="500" prefWidth="80">
+
+    </VBox>
+    <ScrollPane fx:id="sp" layoutY="20" prefWidth="160" prefHeight="400" hbarPolicy="NEVER">
+        <VBox  fx:id="vbox" alignment="TOP_CENTER">
+
+        <Button fx:id="gglts" text="公共聊天室" prefWidth="160" onAction="#setGglts"/>
+        </VBox>
+    </ScrollPane>
+    <TextArea fx:id="message" layoutX="160.0" layoutY="320.0" prefHeight="100.0" prefWidth="340.0" promptText="在此输入消息......" wrapText="true" />
+    <HBox layoutY="300" layoutX="160" prefWidth="340" prefHeight="20">
+        <Button id="screenshot"  text="截图" prefWidth="60" onAction="#screenShot"/>
+        <Button fx:id="uploader"  text="打开文件" prefWidth="80" onAction="#upLoadSelect"/>
+        <Button   text="上传文件" prefWidth="80" onAction="#upLoading"/>
+        <Button   text="下载文件" prefWidth="80" onAction="#download"/>
+        <Button id="videoCalls" text="语音" onAction="#announce" prefWidth="60"/>
+    </HBox>
+    <ScrollPane fx:id="scrollPane" layoutX="160" layoutY="0" prefHeight="300" prefWidth="340" >
+        <FlowPane  fx:id="fp" layoutX="160" >
+
+
+        </FlowPane>
+    </ScrollPane>
+
+    <Button  layoutY="420" layoutX="420" prefWidth="80" text="发送" onAction="#actionPerformedSend"/>
+
+
+
+</AnchorPane>

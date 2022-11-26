@@ -1,0 +1,43 @@
+root {
+    display: block;
+}
+.root {
+    -fx-background-image: url("title.jpg");
+    -fx-background-size:100%;
+    -fx-background-position: center,center;
+}
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+/*#uploader{*/
+/*}*/
+/*#videoCalls{*/
+/*}*/
+.button {
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    /*-fx-background-color: linear-gradient(#61a2b1, #2A5058);*/
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-position: relative;
+    /*-fx-border: none;*/
+    /*-fx-outline: none;*/
+    -fx-cursor: position;
+    -fx-transition:all ease 0.3s;
+}
+.button:focused{
+    -fx-opacity: 0.8;
+    -fx-animated: waving 2s linear infinite;
+}
+@keyframes waving {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 46px 0;
+    }
+}

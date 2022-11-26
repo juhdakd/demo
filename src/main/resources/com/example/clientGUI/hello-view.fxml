@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.clientGUI.HelloController" alignment="CENTER">
+    <HBox >
+        <VBox spacing="30.0" alignment="TOP_CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+            </padding>
+
+            <Label  text="服务器地址"/>
+            <Label text="端口"/>
+            <Label  text="用户名"/>
+            <Label text="密码"/>
+
+        </VBox>
+        <VBox spacing="20.0" alignment="TOP_CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+            </padding>
+
+
+            <TextField fx:id="severInput" text="127.0.0.1" editable="false"/>
+            <TextField fx:id="port" text="9999" editable="false"/>
+            <TextField fx:id="nameInput" />
+            <TextField fx:id="password"/>
+
+
+        </VBox>
+        <VBox spacing="20.0" alignment="TOP_CENTER">
+            <padding>
+                <Insets bottom="20.0" left="10.0" right="20.0" top="10.0"/>
+            </padding>
+            <Button text="修改" onAction="#setChangesever"/>
+            <Button text="修改" onAction="#setChangport"/>
+
+
+
+        </VBox>
+
+        <!--Button fx:id="login" text="没有账号？立刻注册！" alignment="CENTER" onAction="#register"/-->
+    </HBox>
+    <HBox spacing="40" alignment="CENTER">
+        <Button fx:id="enter" text="确定"  onAction="#login"/>
+        <Button fx:id="close" text="取消" onAction="#exit"/>
+    </HBox>
+    <stylesheets >
+        <URL value="@Login.css"></URL>
+    </stylesheets>
+</VBox>
